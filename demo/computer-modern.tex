@@ -1,0 +1,60 @@
+\documentclass[a4paper]{article}
+
+% ------------------------------------------------------------------------------------------
+%                                   Packages Required
+% ------------------------------------------------------------------------------------------
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{tcolorbox}
+
+% ------------------------------------------------------------------------------------------
+%                           tcolorbox and theorem Environment
+% ------------------------------------------------------------------------------------------
+
+\tcbuselibrary{theorems}
+\newtcbtheorem
+  []% init options
+  {theorem}% name
+  {Theorem}% title
+  {%
+    colback=blue!5,
+    colframe=blue!35!black,
+    fonttitle=\bfseries,
+  }% options
+  {thm}% prefix
+
+\makeatletter
+
+% ------------------------------------------------------------------------------------------
+%                                   User defined Commands
+% ------------------------------------------------------------------------------------------
+
+\newcommand{\reals}{\mathbb{R}}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\f}[1]{$f(#1)$}
+\newcommand{\tcb@cnt@theoremautorefname}{Theorem}
+\makeatother
+
+% ------------------------------------------------------------------------------------------
+
+\begin{document}
+
+% write inverse function theorem here
+
+\begin{theorem}{Inverse Function Theorem}{}
+Let $f$ be a continuously differentiable function from an open set $U \subset \reals^{n}$ to $\reals^{n}$, and let $a \in U$. If the Jacobian determinant $J_{f}(a)$ is nonzero, then there exists an open set $V$ containing $a$ and an open set $W$ containing $f(a)$ such that $f$ is one-to-one on $V$ and such that the inverse function $f^{-1}$ is continuously differentiable on $W$.
+\end{theorem}
+
+\begin{theorem}{Implicit Function Theorem}{}
+Let $f$ be a continuously differentiable function from an open set $U \subset \reals^{n+m}$ to $\reals^{m}$, and let $(a,b) \in U$. If $f(a,b) = 0$ and the Jacobian matrix $J_{f}(a,b)$ has rank $m$, then there exist open sets $V$ and $W$ in $\reals^{n}$ and $\reals^{m}$, respectively, with $(a,b) \in V \times W \subset U$, and a continuously differentiable function $g: V \to W$ such that $f(x,g(x)) = 0$ for all $x \in V$.
+\end{theorem}
+
+\begin{theorem}{Lagrange Multiplier Theorem}{}
+Let $f$ and $g_{1}, \ldots, g_{m}$ be continuously differentiable functions from an open set $U \subset \reals^{n}$ to $\reals$. If $a \in U$ is a local extremum of $f$ subject to the constraints $g_{1}(x) = \cdots = g_{m}(x) = 0$, and if the gradients $\nabla g_{1}(a), \ldots, \nabla g_{m}(a)$ are linearly independent, then there exist constants $\lambda_{1}, \ldots, \lambda_{m}$ such that
+\begin{equation*}
+\nabla f(a) = \lambda_{1} \nabla g_{1}(a) + \cdots + \lambda_{m} \nabla g_{m}(a).
+\end{equation*}
+\end{theorem}
+
+\end{document}
