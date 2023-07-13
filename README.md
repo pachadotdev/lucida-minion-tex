@@ -96,7 +96,7 @@ Run the script `install.sh` and select the available options:
 
 ```bash
 cd lucida-minion-tex
-sudo bash install.sh
+bash install.sh
 ```
 
 ### Steps for Windows
