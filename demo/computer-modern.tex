@@ -1,60 +1,56 @@
-\documentclass[a4paper]{article}
-
-% ------------------------------------------------------------------------------------------
-%                                   Packages Required
-% ------------------------------------------------------------------------------------------
+\documentclass[letterpaper]{article}
 
 \usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{tcolorbox}
+\usepackage{url}
+\usepackage{hyperref}
 
-% ------------------------------------------------------------------------------------------
-%                           tcolorbox and theorem Environment
-% ------------------------------------------------------------------------------------------
+% set text colour to #2c2e35
+\usepackage{xcolor}
+\definecolor{dark}{HTML}{2c2e35}
+\color{dark}
 
-\tcbuselibrary{theorems}
-\newtcbtheorem
-  []% init options
-  {theorem}% name
-  {Theorem}% title
-  {%
-    colback=blue!5,
-    colframe=blue!35!black,
-    fonttitle=\bfseries,
-  }% options
-  {thm}% prefix
+% set margins to 1 inch
+\usepackage[margin=1in]{geometry}
 
-\makeatletter
+% set indent to 0
+\setlength{\parindent}{0pt}
 
-% ------------------------------------------------------------------------------------------
-%                                   User defined Commands
-% ------------------------------------------------------------------------------------------
+% set paragraph spacing to 1em
+\setlength{\parskip}{1em}
 
-\newcommand{\reals}{\mathbb{R}}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\newcommand{\f}[1]{$f(#1)$}
-\newcommand{\tcb@cnt@theoremautorefname}{Theorem}
-\makeatother
+\title{Imitating the Typography From Classic Hindawi Journals
+(i.e., from `Fixed Points as Nash Equilibria' (Torres-Mart\'inez, 2006))}
 
-% ------------------------------------------------------------------------------------------
+\author{Pach\'a (\url{https://pacha.dev})}
 
 \begin{document}
 
-% write inverse function theorem here
+\maketitle
 
-\begin{theorem}{Inverse Function Theorem}{}
-Let $f$ be a continuously differentiable function from an open set $U \subset \reals^{n}$ to $\reals^{n}$, and let $a \in U$. If the Jacobian determinant $J_{f}(a)$ is nonzero, then there exists an open set $V$ containing $a$ and an open set $W$ containing $f(a)$ such that $f$ is one-to-one on $V$ and such that the inverse function $f^{-1}$ is continuously differentiable on $W$.
-\end{theorem}
+This uses Computer Modern (TeX default).
 
-\begin{theorem}{Implicit Function Theorem}{}
-Let $f$ be a continuously differentiable function from an open set $U \subset \reals^{n+m}$ to $\reals^{m}$, and let $(a,b) \in U$. If $f(a,b) = 0$ and the Jacobian matrix $J_{f}(a,b)$ has rank $m$, then there exist open sets $V$ and $W$ in $\reals^{n}$ and $\reals^{m}$, respectively, with $(a,b) \in V \times W \subset U$, and a continuously differentiable function $g: V \to W$ such that $f(x,g(x)) = 0$ for all $x \in V$.
-\end{theorem}
+Let $Y \subset \mathbb{R}^n$ be a convex set. A function
+$v: Y \rightarrow \mathbb{R}$ is \emph{quasiconcave} if, for each
+$\lambda \in (0,1)$, we have
+$v(\lambda y_1 + (1 - \lambda y_2)) \geq \min\{v(y_1),\: v(y_2) \}$, for all
+$(y_1, y_2) \in Y \times Y$.
 
-\begin{theorem}{Lagrange Multiplier Theorem}{}
-Let $f$ and $g_{1}, \ldots, g_{m}$ be continuously differentiable functions from an open set $U \subset \reals^{n}$ to $\reals$. If $a \in U$ is a local extremum of $f$ subject to the constraints $g_{1}(x) = \cdots = g_{m}(x) = 0$, and if the gradients $\nabla g_{1}(a), \ldots, \nabla g_{m}(a)$ are linearly independent, then there exist constants $\lambda_{1}, \ldots, \lambda_{m}$ such that
-\begin{equation*}
-\nabla f(a) = \lambda_{1} \nabla g_{1}(a) + \cdots + \lambda_{m} \nabla g_{m}(a).
-\end{equation*}
-\end{theorem}
+\emph{[Nash-2.]} Given $\mathcal{G}=\{I,S_i,V^i\}$, suppose each set
+$S_i \in \mathcal{H}$ and that objective functions are continuous in its
+domain and \emph{quasiconcave} in its own strategy. Then there is a Nash
+equilibrium for $\mathcal{G}$.
+
+\emph{[Kakutani.]} Given $X \in \mathcal{H}$, every closed-graph correspondence
+$\Phi: X \twoheadrightarrow X$, with $\Phi(x) \in \mathcal{H}$ for all
+$x \in X$, has a fixed point, provided that
+$\Phi(x) = \prod_{j=1}^{m} \pi_j^m(\Phi(x))$ for each
+$x \in X \subset \mathbb{R}^m$.
+
+The article proves that \emph{[Nash-2]} $\rightarrow$ \emph{[Kakutani]}.
+
+Ok, sufficient display of math symbols.
+
+See \url{https://github.com/pachadotdev/varsityblues} for a set of complete
+LaTeX templates to be used with R Markdown or Quarto.
 
 \end{document}

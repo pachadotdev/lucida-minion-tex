@@ -1,2 +1,7 @@
 *.zip
+*.aux
+*.log
+*.out
+*.pfb
+*.gz
 minion
