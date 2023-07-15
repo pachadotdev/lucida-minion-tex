@@ -70,8 +70,8 @@ then
       for font in minion/*.otf
       do
         base=$(basename "$font" .otf)
-        cfftot1 "$font" "minion-nofont/pfb/$base.pfb"
-        t1dotlessj "minion-nofont/pfb/$base.pfb" "minion-nofont/pfb/${base}LCDFJ.pfb"
+        cfftot1 "$font" "minion-nofont/fonts/type1/adobe/MinionPro/$base.pfb"
+        t1dotlessj "minion-nofont/fonts/type1/adobe/MinionPro/$base.pfb" "minion-nofont/fonts/type1/adobe/MinionPro/${base}LCDFJ.pfb"
       done
     else
       echo "Please get the fonts in pfb format or install cfftot1."
