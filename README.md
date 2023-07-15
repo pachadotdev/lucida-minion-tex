@@ -43,11 +43,12 @@ git clone --depth 1 git@github.com:pachadotdev/lucida-minion-tex.git
 
 ### Copy Lucida files
 
-Put the corresponding zip files for Lucida in the root folder of this repository.
+Put the corresponding zip files for Lucida in the root folder of this
+repository. These files are `lucida-type1.zip` and `lucimacros.zip`.
 
 ### Copy Minion Pro files
 
-#### If you only have the font  in OTF format
+#### If you only have the font in OTF format
 
 Create the `minion` folder in the root of this repository and put the Minion Pro
 fonts in OTF format into it. This corresponds to the next files:
@@ -84,7 +85,7 @@ brew install lcdf-typetools
 
 #### If you have the font in PFB format
 
-Copy the PFB files to the `minion-nofont/pfb`.
+Copy the PFB files to the `minion-nofont/fonts/type1/adobe/MinionPro/`.
 
 ### Run the script for Linux (and also Mac or Unix)
 

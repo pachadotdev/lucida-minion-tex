@@ -50,8 +50,8 @@ if [ $choice = 2 ] || [ $choice = 3 ]
 then
   echo "Installing Minion Pro..."
 
-  # if there are no files matching MinionPro in minion-nofont/pfb, then run cfftot1
-  if ! ls minion-nofont/pfb/MinionPro*.pfb &> /dev/null
+  # if there are no files matching MinionPro, then run cfftot1
+  if ! ls minion-nofont/fonts/type1/adobe/MinionPro/MinionPro*.pfb &> /dev/null
   then
     # if cfftot1 does not exist, install it
     if ! command -v cfftot1 &> /dev/null
