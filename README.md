@@ -15,8 +15,8 @@ You can compare the differences here:
 * Lucida and Minion Pro: [pdf](https://github.com/pachadotdev/lucida-minion-tex/blob/main/demo/lucida-and-minion.pdf) and [tex](https://github.com/pachadotdev/lucida-minion-tex/blob/main/demo/lucida-and-minion.tex)
 
 Lucida is a commercial font that can be purchased from [TUG](https://www.tug.org/store/lucida/index.html).
-After purchasing the font, you will receive a zip files with the fonts and the 
-macros (lucida-type1.zip and lucimacros.zip).
+After purchasing the font, you will receive zip files with the fonts and the 
+macros (`lucida-type1.zip` and `lucimacros.zip`).
 
 Minion Pro comes with Adobe Illustrator or can be purchased by separate from
 [Adobe](https://fonts.adobe.com/fonts/minion).
