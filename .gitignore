@@ -4,4 +4,4 @@
 *.out
 *.pfb
 *.gz
-minion
+minion/*.otf
